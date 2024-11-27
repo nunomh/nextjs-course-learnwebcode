@@ -17,3 +17,14 @@ This a portfolio like website with a homepage and team members page and about us
 
 - Next.js 14
 - Strapi 5 (CMS)
+
+## Project Creation (using Manual Method)
+
+`npm init -y`
+`npm install next react react-dom`
+Landing page created at 'app/page.jsx' with a simple h1.
+Package.json updated with scripts for development and build. (copied from https://nextjs.org/docs/app/getting-started/installation#manual-installation)
+
+## Project Start
+
+`npm run dev`
