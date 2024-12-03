@@ -1,3 +1,5 @@
+import "../assets/main.css";
+
 import Link from "next/link";
 import Footer from "../components/Footer";
 
@@ -10,11 +12,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div>
-          <Link href="/about-us">About Page</Link> | <Link href="/">Home</Link>
+        <div className="bg-gray-200 min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+          <div>
+            <Link href="/about-us">About Page</Link> |{" "}
+            <Link href="/">Home</Link>
+          </div>
+          <main>{children}</main>
+          <Footer />
         </div>
-        {children}
-        <Footer />
       </body>
     </html>
   );
