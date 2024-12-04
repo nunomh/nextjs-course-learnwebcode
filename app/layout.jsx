@@ -2,6 +2,7 @@ import "../assets/main.css";
 
 import Link from "next/link";
 import Footer from "../components/Footer";
+import NavLink from "../components/NavLink";
 
 export const metadata = {
   title: "Next.js",
@@ -13,11 +14,27 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="bg-gray-200 min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
-          <div>
-            <Link href="/about-us">About Page</Link> |{" "}
-            <Link href="/">Home</Link>
-          </div>
-          <main>{children}</main>
+          <header className="bg-white/50">
+            <div className="max-w-4xl mx-auto flex items-center justify-between">
+              <h2 className="text-2xl text-gray-500 py-6">Header</h2>
+              <nav>
+                <ul className="flex gap-x-7 text-gray-500 text-sm">
+                  <li>
+                    <NavLink textToDisplay="Home" customPath="/" />
+                  </li>
+                  <li>
+                    <NavLink textToDisplay="Our Team" customPath="/our-team" />
+                  </li>
+                  <li>
+                    <NavLink textToDisplay="About Us" customPath="/about-us" />
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <main className="max-w-4xl mx-auto bg-white/50 rounded-xl py-7 px-8 m-6 overflow-hidden">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>
