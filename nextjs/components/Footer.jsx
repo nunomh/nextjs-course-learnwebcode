@@ -10,7 +10,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-white/50">
+    <footer className="bg-white/50 backdrop-blur z-10">
       <div className="mx-auto max-w-4xl text-center py-6 text-sm text-gray-400">
         <p>&copy; {new Date().getFullYear()} Our Company</p>
         <p>

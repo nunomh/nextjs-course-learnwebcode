@@ -14,7 +14,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="bg-gray-200 min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
-          <header className="bg-white/50">
+          <div className="absolute z-0 inset-0 overflow-hidden">
+            <div className="circle-one blur-3xl w-64 h-64 rounded-full bg-rose-400/60 top-0 right-28 absolute"></div>
+            <div className="circle-two blur-3xl w-64 h-64 rounded-full bg-indigo-400/60 bottom-0 left-28 absolute"></div>
+          </div>
+          <header className="bg-white/50 backdrop-blur z-10">
             <div className="max-w-4xl mx-auto flex items-center justify-between">
               <h2 className="text-2xl text-gray-500 py-6">Header</h2>
               <nav>
@@ -32,7 +36,7 @@ export default function RootLayout({ children }) {
               </nav>
             </div>
           </header>
-          <main className="max-w-4xl mx-auto bg-white/50 rounded-xl py-7 px-8 m-6 overflow-hidden">
+          <main className="max-w-4xl mx-auto bg-white/50 rounded-xl py-7 px-8 m-6 overflow-hidden backdrop-blur z-10">
             {children}
           </main>
           <Footer />
