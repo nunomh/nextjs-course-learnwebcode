@@ -64,3 +64,9 @@ Create a css file (can be any name in any folder, for the example it was used as
 
 Finally import on top of the layout.jsx file
 `import "../assets/main.css";`
+
+## Strapi Installation
+
+On a new project folder, run the command `npx create-strapi-app@latest my-strapi-app`` (Skip login / typescript no)
+
+Run the command `npm run develop` to start the server.
