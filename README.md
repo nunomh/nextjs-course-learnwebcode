@@ -18,6 +18,7 @@ This a portfolio like website with a homepage and team members page and about us
 - Next.js 14
 - Strapi 5 (CMS)
 - Tailwind CSS
+- QueryString (qs module)
 
 ## Project Creation (using Manual Method)
 
