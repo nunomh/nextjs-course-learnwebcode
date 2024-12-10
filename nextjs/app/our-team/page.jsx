@@ -18,16 +18,23 @@ export default async function Page() {
         {members.map((member) => {
           return (
             <Link
-              className="grid grid-cols-[140px_1fr] bg-white shadow rounded-lg overflow-hidden"
+              className="group grid grid-cols-[140px_1fr] bg-white shadow rounded-lg overflow-hidden relative hover:bg-gradient-to-r from-white to-amber-50"
               key={member.id}
               href={`/our-team/${member.slug}`}
             >
-              <img
-                src={`http://localhost:1337${member.photo.formats.medium.url}`}
-              />
-              <div>
-                <p>{member.name}</p>
-                <p>{member.description}</p>
+              <div className="relative overflow-hidden">
+                <img
+                  className="transition duration-300 absolute inset-0 h-full w-full object-cover group-hover:scale-125 group-hover:rotate-12"
+                  src={`http://localhost:1337${member.photo.formats.medium.url}`}
+                />
+              </div>
+              <div className="p-4">
+                <p className="text-xl text-gray-600 font-bold group-hover:text-gray-700">
+                  {member.name}
+                </p>
+                <p className="text-sm text-gray-500 leading-6">
+                  {member.description}
+                </p>
               </div>
             </Link>
           );

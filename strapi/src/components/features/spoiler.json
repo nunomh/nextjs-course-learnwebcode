@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_features_spoilers",
+  "info": {
+    "displayName": "spoiler",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "clickableText": {
+      "type": "string"
+    },
+    "actualSpoiler": {
+      "type": "text"
+    }
+  }
+}

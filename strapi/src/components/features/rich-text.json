@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_features_rich_texts",
+  "info": {
+    "displayName": "richText",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

@@ -6,6 +6,7 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
     singularName: 'team-member';
     pluralName: 'team-members';
     displayName: 'Team Member';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -15,6 +16,9 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     photo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    bodyContent: Schema.Attribute.DynamicZone<
+      ['features.testimonial', 'features.spoiler', 'features.rich-text']
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
