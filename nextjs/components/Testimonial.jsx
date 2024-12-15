@@ -4,12 +4,15 @@ export default function Testimonial(props) {
       <p className="text-2xl italic text-gray-600">
         &ldquo;{props.data.quote}&rdquo;
       </p>
-      <div>
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
         <img
+          className="w-32 h-32 rounded-full border-4 border-gray-200"
           src={`http://localhost:1337${props.data.photo.formats.medium.url}`}
           alt={props.data.authorName}
         />
-        <h4>{props.data.authorName}</h4>
+        <h4 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gray-200 shadow px-3 py-2 font-bold rounded-full text-gray-800">
+          {props.data.authorName}
+        </h4>
       </div>
     </div>
   );
